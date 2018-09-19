@@ -1,0 +1,16 @@
+.header-container {
+    height: 15vh;
+    width: 100%;
+    background-color: rgb(241, 241, 168);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 35px 0;
+}
+
+.title-container {
+    background-color: rgb(219, 152, 219);
+    padding: 35px;
+    border: 1px solid black;
+    font-size: 45px;
+}

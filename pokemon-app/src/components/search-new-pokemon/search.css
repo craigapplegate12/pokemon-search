@@ -1,0 +1,17 @@
+.search-container {
+    height: 30vh;
+    width: 80%;
+    background-color: rgb(163, 163, 235);
+    margin: 25px;
+    padding: 20px;
+}
+
+.search-items {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.search-input {
+    width: 40%;
+    margin-left: -20px;
+}

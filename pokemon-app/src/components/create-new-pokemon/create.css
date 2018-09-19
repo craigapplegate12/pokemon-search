@@ -1,0 +1,37 @@
+.create-container {
+    height: 30vh;
+    width: 80%;
+    background-color: rgb(204, 113, 113);
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    margin: 25px;
+    padding: 20px;
+}
+
+.span-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-input {
+    margin-left: -30px;
+    width: 300px;
+    margin: 8px;
+
+}
+
+.input-text{
+    margin: 8px;
+}
