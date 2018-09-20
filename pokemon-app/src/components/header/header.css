@@ -1,16 +1,22 @@
 .header-container {
     height: 15vh;
     width: 100%;
-    background-color: rgb(241, 241, 168);
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 35px 0;
 }
 
 .title-container {
-    background-color: rgb(219, 152, 219);
+    color: yellow;
     padding: 35px;
     border: 1px solid black;
     font-size: 45px;
 }
+
+.dark-light-title {
+    font-size: 50px;
+    border: 2px dashed yellow;
+    padding: 15px;
+    color: yellow;
+  }

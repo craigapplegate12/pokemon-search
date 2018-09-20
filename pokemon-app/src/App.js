@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
-import Create from './components/create-new-pokemon/Create.js';
-import Search from './components/search-new-pokemon/Search.js';
+import Create from './components/create/Create.js';
+import Search from './components/search/Search.js';
 import Header from './components/header/Header.js';
-import List from './components/list/List.js';
+import DarkList from './components/list-dark-side/dark-list';
 
 
 
@@ -13,44 +13,39 @@ class App extends Component {
     name: '',
     type: '',
     moves: '',
+    id: 0,
     description: '',
-    pokemonList: ['hi']
+    charactersList: [],
+    data: []
   }
+
 
   componentDidMount(){
-    axios.get('https://pokeapi.co/api/v1/pokedex/1')
+    axios.get("https://swapi.co/api/people")
     .then( response => {
-      console.log(response.data.pokemon);
+      console.log(response.data.results);
+      this.setState({ data: response.data.results });
     })
-  }
-
-  addPokemon = (text) => {
-    axios.get('https://pokeapi.co/api/v1/pokedex/1')
-    .then( response => {
-      this.setState({pokemonList: [response.data.pokemon]})
+    .catch((error) => {
+      console.log(error)
     })
-  }
-
-  handleAddTask = newPoke => {
-    this.setState({ pokemonList: [...this.state.pokemonList, newPoke]})
   }
 
   render() {
-    console.log(this.state.name);
-    console.log(this.state.pokemonList);
-
     return (
+      
       <div className="full-body">
         <div>
           <Header />
         </div>
            <div className="large-container">
               <div className="left-container">
-                <Search addPokemonFn={this.handleAddTask}/>
+              </div>
+              <div >
+                <Search />
                 <Create />
               </div>
               <div className="right-container">
-                 <List />
               </div>
            </div>
       </div>

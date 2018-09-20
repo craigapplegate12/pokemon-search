@@ -4,7 +4,9 @@ import './header.css';
 export default function Header(){
     return (
         <div className="header-container">
-            <div className="title-container">POKEMON SEARCH</div>
+            <div className="dark-light-title">LIGHT SIDE</div>
+            <div className="title-container">VS.</div>
+            <div className="dark-light-title">DARK SIDE</div>
         </div>
     )
 }

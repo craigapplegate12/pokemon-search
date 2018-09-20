@@ -1,0 +1,24 @@
+.list-container {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    justify-content: center;
+    align-items: left;
+    padding: 15px;
+    border: 1px dotted red;
+}
+
+.list-title {
+    border: 1px solid black;
+    padding: 10px;
+    float: left;
+    color: yellow;
+
+}
+
+.character-card {
+    padding: 10px 50px;
+}
+
+
+

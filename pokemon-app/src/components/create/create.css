@@ -1,13 +1,12 @@
 .create-container {
     height: 30vh;
-    width: 80%;
-    background-color: rgb(204, 113, 113);
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: space-between;
-    margin: 25px;
-    padding: 20px;
+    margin-left: -20px;
+    padding: 0px 30px;
 }
 
 .span-text {
@@ -16,6 +15,7 @@
     justify-content: center;
     align-items: center;
     margin: 20px;
+    color: yellow;
 }
 
 .input-field {
@@ -27,9 +27,9 @@
 
 .create-input {
     margin-left: -30px;
-    width: 300px;
+    width: 200px;
     margin: 8px;
-
+    padding: 0 25px;
 }
 
 .input-text{
