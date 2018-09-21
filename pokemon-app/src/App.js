@@ -4,7 +4,7 @@ import './App.css';
 import Create from './components/create/Create.js';
 import Search from './components/search/Search.js';
 import Header from './components/header/Header.js';
-import DarkList from './components/list-dark-side/dark-list';
+import List from './components/lists/list';
 
 
 
@@ -17,7 +17,7 @@ class App extends Component {
   componentDidMount(){
     axios.get("https://swapi.co/api/people")
     .then( response => {
-      console.log(response.data.results);
+      console.log(response.data);
       this.setState({ data: response.data.results });
     })
     .catch((error) => {

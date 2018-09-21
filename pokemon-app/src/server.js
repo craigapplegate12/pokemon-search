@@ -7,12 +7,20 @@ const cors = require('cors')
 app.use(bodyParser.json());
 app.use(cors())
 
-let characters;
-axios.get('https://swapi.co/api/people')
+let characters = [];
+/*axios.get('https://swapi.co/api/people')
 .then(response => {
     console.log('finished fetching')
     characters = response.data.results;
-})
+})*/
+let numPages = 9;
+for(let i=1; i<=numPages; i++){
+    axios.get(`https://swapi.co/api/people/?page=${i}`)
+    .then(response => {
+        characters.push(...response.data.results)
+        console.log('done fetching')
+    })
+}
 
 app.get('/characters', (req, res) => {
     res.send(characters)
