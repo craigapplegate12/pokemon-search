@@ -1,15 +1,16 @@
 .full-body {
   background-image: url('./assets/thumb-1920-107763.jpg');
+  width: 100%;
+  height: 100vh;
 }
 
 .large-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-evenly;
 }
 
 .left-container{
-  width: 100%;
+  width: 30%;
   height: 70.09vh;
   display: flex;
   flex-direction: column;
@@ -18,7 +19,7 @@
   }
 
 .right-container {
-  width: 100%;
+  width: 30%;
   height: 70.09vh;
   display: flex;
   flex-direction: column;

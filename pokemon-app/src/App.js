@@ -10,12 +10,6 @@ import DarkList from './components/list-dark-side/dark-list';
 
 class App extends Component {
   state = {
-    name: '',
-    type: '',
-    moves: '',
-    id: 0,
-    description: '',
-    charactersList: [],
     data: []
   }
 
@@ -31,6 +25,7 @@ class App extends Component {
     })
   }
 
+
   render() {
     return (
       
@@ -38,16 +33,9 @@ class App extends Component {
         <div>
           <Header />
         </div>
-           <div className="large-container">
-              <div className="left-container">
-              </div>
-              <div >
-                <Search />
-                <Create />
-              </div>
-              <div className="right-container">
-              </div>
-           </div>
+        <div>
+          <Search />
+        </div>
       </div>
     );
   }

@@ -1,28 +1,46 @@
+.full-body-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .search-container {
     height: 15vh;
-    width: 100%;
+    width: 50%;
     margin: 0px 0px;
     padding: 0px 0px;
     display: flex;
     flex-direction: column;
+    background-color: orange;
 }
 
 .search-items {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .search-input {
-    width: 40%;
+    width: 50%;
     margin-left: -20px;
     padding-left: 10px;
+    margin: 15px 0;
 }
 .add-buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 25px;
+    margin: 10px 10px;
 }
 
 .span {
     color: yellow;
+
+}
+
+.list {
+    width: 40%;
+    height: 60vh;
+    background-color: blue;
 }

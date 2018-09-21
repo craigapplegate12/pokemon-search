@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './search.css';
 import axios from 'axios';
+import DarkList from '../list-dark-side/dark-list.js';
 
 class Search extends Component {
     state = {
@@ -29,6 +30,7 @@ class Search extends Component {
             species: newPerson.species,
             birthYear: newPerson.birth_year
         }
+        this.setState({ darkSideList: [...this.state.darkSideList, newObj]})
         console.log(newObj)
         })
         .catch(error => {
@@ -40,22 +42,32 @@ class Search extends Component {
     }
 
     render(){
-        console.log(this.state.darkSideList)
+        let darkList = this.state.darkSideList.map((person, i) => {
+            return <DarkList key={i} name={person.name} homeWorld={person.homePlanet} species={person.species} birthYear={person.birthYear} />
+        })
         return(
-            <div className="search-container">
-                <div className="search-items">
-                  <span className="span">Search For Star Wars Character: </span>
-                  <input 
-                    className="search-input" 
-                    placeholder="find your character..."
-                    value={this.state.text}   
-                    onChange={(e) => this.handleInputChange(e.target.value)}
-                  />
-            </div>
-            <div className="add-buttons">
-                 <button onClick={this.addPersonDark}>Add to Light Side</button>
-                <button onClick={this.addPersonDark}>Add to Dark Side</button>
-            </div>           
+            <div className="full-body-container">
+              <div className="list">
+
+              </div>
+              <div className="search-container">
+                 <div className="search-items">
+                   <div className="span">Search For Star Wars Character: </div>
+                   <input 
+                     className="search-input" 
+                     placeholder="find your character..."
+                     value={this.state.text}   
+                     onChange={(e) => this.handleInputChange(e.target.value)}
+                   />
+                 </div>
+                 <div className="add-buttons">
+                    <button onClick={this.addPersonDark}>Add to Light Side</button>
+                    <button onClick={this.addPersonDark}>Add to Dark Side</button>
+                 </div>           
+              </div>
+              <div className="list">
+                {darkList}
+              </div>
             </div>
         )
     }

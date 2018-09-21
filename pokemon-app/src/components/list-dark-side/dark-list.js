@@ -6,7 +6,9 @@ export default function DarkList( props ){
         <div>
             <div className="list-container">
                 <div className="character-card">Name: {props.name} </div>
-                <div className="character-card">URL: {props.url} </div>
+                <div className="character-card">Home Planet: {props.homeWorld} </div>
+                <div className="character-card">Species: {props.species} </div>
+                <div className="character-card">Birth-Year: {props.birthYear} </div>
             </div>
         </div>
     )
