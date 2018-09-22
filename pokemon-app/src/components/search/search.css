@@ -5,12 +5,13 @@
 }
 
 .search-container {
-    height: 15vh;
+    height: 50vh;
     width: 50%;
     margin: 0px 0px;
     padding: 0px 0px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .search-items {
@@ -29,16 +30,39 @@
 .add-buttons {
     display: flex;
     justify-content: center;
-    margin: 25px;
-    margin: 10px 10px;
+    align-items: center;
 }
+
+.add-buttons > button {
+    background-color: black;
+    border: 1px solid yellow;
+    color: yellow;
+    margin: 25px;
+    padding: 5px;
+}
+
+.add-buttons > button:hover {
+    opacity: .50;
+}
+
+#light-button {
+    background-color: rgb(1, 1, 85);
+    border: .5px solid blue;
+}
+
+#dark-button {
+    background-color: rgb(59, 0, 0);
+    border: .5px solid red;
+}
+
 
 .span {
     color: yellow;
+    font-size: 20px;
 
 }
 
 .list {
     width: 40%;
-    height: 60vh;
+    height: 5vh;
 }

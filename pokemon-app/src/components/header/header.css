@@ -20,3 +20,11 @@
     padding: 15px;
     color: yellow;
   }
+
+#light-title {
+    background-color: rgba(0, 0, 97, 0.5);
+}
+
+#dark-title {
+    background-color: rgba(97, 0, 0, 0.5);
+}

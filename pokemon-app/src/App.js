@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import './App.css';
-import Create from './components/create/Create.js';
 import Search from './components/search/Search.js';
 import Header from './components/header/Header.js';
-import List from './components/lists/list';
 
 
 
@@ -14,16 +11,16 @@ class App extends Component {
   }
 
 
-  componentDidMount(){
-    axios.get("https://swapi.co/api/people")
+  /*componentDidMount(){
+    axios.get("https://swapi.co/api/species/?page=4")
     .then( response => {
-      console.log(response.data);
+      console.log(response.data.results);
       this.setState({ data: response.data.results });
     })
     .catch((error) => {
       console.log(error)
     })
-  }
+  }*/
 
 
   render() {
@@ -33,9 +30,10 @@ class App extends Component {
         <div>
           <Header />
         </div>
-        <div>
+        <div className="middle-container">
           <Search />
         </div>
+
       </div>
     );
   }

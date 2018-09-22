@@ -9,20 +9,3 @@
   justify-content: space-evenly;
 }
 
-.left-container{
-  width: 30%;
-  height: 70.09vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 0;
-  }
-
-.right-container {
-  width: 30%;
-  height: 70.09vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 0;
-}

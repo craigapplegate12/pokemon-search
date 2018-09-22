@@ -1,25 +1,59 @@
 .list-container {
     display: flex;
-    flex-direction: column;
     margin: 15px;
-    justify-content: center;
-    align-items: left;
+    justify-content: space-between;
+    align-items: right;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.582);
-    border: 1px dotted red;
+    background-color: rgba(3, 0, 31, 0.849);
+    border: 1px dotted yellow;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+     -ms-animation: fadein 1s; /* Internet Explorer */
+      -o-animation: fadein 1s; /* Opera < 12.1 */
+         animation: fadein 1s; 
 }
 
-.list-title {
-    border: 1px solid black;
-    padding: 10px;
-    float: left;
-    color: yellow;
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
+
+#light-container {
+    background-color: rgba(3, 0, 31, 0.849);
+}
+#light-container:hover {
+    background-color: rgba(10, 0, 95, 0.849);
+}
+
+#dark-container {
+    background-color: rgba(31, 0, 0, 0.849);
+}
+#dark-container:hover {
+    background-color: rgba(83, 0, 0, 0.849);
+}
+
 
 .character-card {
     color: yellow;
     margin: 10px 15px;
+}
+
+.remove-button {
+    float: right;
+    background-color: rgba(36, 0, 0, 0.733);
+    border: 1px solid rgb(217, 255, 0);
+    color: yellow;
+    padding: 5px;
+}
+
+
+#light-remove {
+    background-color: rgba(7, 0, 36, 0.733);
+}
+
+.remove-button:hover {
+    opacity: .5;
 }
 
 
